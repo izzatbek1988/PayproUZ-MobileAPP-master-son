@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:Resource="clr-namespace:Paypro_Mobile.Resources"
+             x:Class="Paypro_Mobile.Views.ISSPaymentPage">
+ 
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame BorderColor="DodgerBlue" HasShadow="True" Margin="20,20,20,150" CornerRadius="10" Padding="10">
+                <StackLayout x:Name="MasterLayout">
+                    <StackLayout x:Name="LogoStack">
+                        <Image x:Name="payproLogo" Source="paypro2.png"  ></Image>
+                        <BoxView x:Name="line" ></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="&#xf1eb;" TextColor="Black" VerticalTextAlignment="Center" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="lblHeading" Text="{x:Static Resource:LangRS.ISSSubTitle}"></Label>
+                            <Label Text="&#xf063;" TextColor="Black" VerticalTextAlignment="Center"  FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                        </StackLayout>
+
+                        <BoxView x:Name="line2" ></BoxView>
+                    </StackLayout>
+
+                    <StackLayout x:Name="TextBoxStack" Margin="20,20,20,0">
+                        <Label x:Name="lblissPicker" Text="{x:Static Resource:LangRS.ISSSelectProviderText}"></Label>
+                        <Picker x:Name="issPicker">
+                        </Picker>
+                        <Label x:Name="lblAccountNumber" Text="{x:Static Resource:LangRS.GlobalAccountNumberText}"></Label>
+                        <Entry x:Name="tboxAccountNumber" MaxLength="20" Placeholder="{x:Static Resource:LangRS.GlobalAccountNumberText}" Keyboard="Numeric" />
+                        <Label x:Name="lblMoney" Text="{x:Static Resource:LangRS.GlobalInputMoneyText}"></Label>
+                        <Entry x:Name="tboxMoney" MaxLength="7" Placeholder="{x:Static Resource:LangRS.GlobalInputMoneyText}" Keyboard="Numeric" />
+                        <Button CornerRadius="10" x:Name="btnContinue" Clicked="btnContinue_Clicked" Text="{x:Static Resource:LangRS.GlobalBtnContinueText}"></Button>
+                        <Button  CornerRadius="10" x:Name="btnBack" Text="{x:Static Resource:LangRS.GlobalBtnBackText}" Clicked="btnBack_Clicked"></Button>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

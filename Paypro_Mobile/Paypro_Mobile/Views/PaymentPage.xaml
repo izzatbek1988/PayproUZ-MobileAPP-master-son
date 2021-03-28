@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:Resource="clr-namespace:Paypro_Mobile.Resources"
+             x:Class="Paypro_Mobile.Views.PaymentPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame BorderColor="DodgerBlue" HasShadow="True" Margin="20,20,20,150" CornerRadius="10" Padding="10">
+                <StackLayout x:Name="MasterLayout">
+                    <StackLayout x:Name="LogoStack">
+                        <Image x:Name="payproLogo" Source="paypro2.png" ></Image>
+                        <BoxView x:Name="line" ></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="&#xf063;" TextColor="Black" VerticalTextAlignment="Center" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label  HorizontalTextAlignment="Center" x:Name="lblHeading" Text="{x:Static Resource:LangRS.PaymentPageSubTitle}"></Label>
+                            <Label Text="&#xf063;" TextColor="Black" VerticalTextAlignment="Center" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                        </StackLayout>
+                        <Label  Margin="20,0,20,0" x:Name="lblWarning" Text="{x:Static Resource:LangRS.PaymentPageWarningText}"></Label>
+                        <BoxView x:Name="line2" ></BoxView>
+                    </StackLayout>
+
+                    <StackLayout x:Name="TextBoxStack" Margin="20,5,20,5">
+                        <Label x:Name="lblAccNumber" ></Label>
+                        <Entry x:Name="tboxAccNumber" IsReadOnly="True"  Keyboard="Numeric"  />
+                        <Label x:Name="lblMoney" Text="Rubl:"></Label>
+                        <Entry x:Name="tboxMoney" IsReadOnly="True"  Keyboard="Numeric"  />
+                        <Label x:Name="lblUZS" Text="UZS:"></Label>
+                        <Entry x:Name="tboxUZS" IsReadOnly="True"  Keyboard="Numeric" />
+                        <Button CornerRadius="10" x:Name="btnContinue" Clicked="btnContinue_Clicked" Text="{x:Static Resource:LangRS.PaymentBtnCompleteText}"></Button>
+                        <Button CornerRadius="10" x:Name="btnBack" Clicked="btnBack_Clicked" Text="{x:Static Resource:LangRS.GlobalBtnBackText}" ></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlertNoText" xml:space="preserve">
+    <value>YO`Q</value>
+  </data>
+  <data name="AlertOKText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="AlertSaveFailMessage" xml:space="preserve">
+    <value>Ma'lumotlar yangilanishida xato bo`ldi. Ma'lumotlarni to`g`riligidan amin bo`ling.</value>
+  </data>
+  <data name="AlertSaveSuccessMessage" xml:space="preserve">
+    <value>Ma'lumotlar muvaffaqiyatli qayd etildi.</value>
+  </data>
+  <data name="AlertYesText" xml:space="preserve">
+    <value>HA</value>
+  </data>
+  <data name="AutoLoginText" xml:space="preserve">
+    <value>Auto Login</value>
+  </data>
+  <data name="CardPageCardNumberInput" xml:space="preserve">
+    <value>Plastik (bank) kartasi raqami:</value>
+  </data>
+  <data name="CardPageSubTitle" xml:space="preserve">
+    <value>Plastik (bank) Kartalari Bo`limi</value>
+  </data>
+  <data name="CardPageTitle" xml:space="preserve">
+    <value>Plastik (bank) Kartalari</value>
+  </data>
+  <data name="ChangeLanguageText" xml:space="preserve">
+    <value>Yozuvni o`zgartirish</value>
+  </data>
+  <data name="ErrorMessageEmpty" xml:space="preserve">
+    <value>Iltimos bo`sh joyni to`ldiring.</value>
+  </data>
+  <data name="ErrorMessageMinMoney" xml:space="preserve">
+    <value>Yozgan summangiz minimumdan past!</value>
+  </data>
+  <data name="GlobalAccountNumberText" xml:space="preserve">
+    <value>Hisob raqamini kiriting:</value>
+  </data>
+  <data name="GlobalBtnBackText" xml:space="preserve">
+    <value>Orqaga</value>
+  </data>
+  <data name="GlobalBtnContinueText" xml:space="preserve">
+    <value>Keyingsi</value>
+  </data>
+  <data name="GlobalInputMoneyText" xml:space="preserve">
+    <value>Summani yozing</value>
+  </data>
+  <data name="HomePageCard" xml:space="preserve">
+    <value>Plastik (bank) kartalari</value>
+  </data>
+  <data name="HomePageIPTelefoniya" xml:space="preserve">
+    <value>IP telefoniya</value>
+  </data>
+  <data name="HomePageIPTV" xml:space="preserve">
+    <value>Televedeniya (IP TV)</value>
+  </data>
+  <data name="HomePageISS" xml:space="preserve">
+    <value>Internet provayderlari (Wi-Fi)</value>
+  </data>
+  <data name="HomePageMobile" xml:space="preserve">
+    <value>Mobil aloqa</value>
+  </data>
+  <data name="HomePagePublicServices" xml:space="preserve">
+    <value>Kommunal xizmatlar</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomePageWelcomeMsg" xml:space="preserve">
+    <value>Xush kelibsiz!</value>
+  </data>
+  <data name="InvalidCardErrorText" xml:space="preserve">
+    <value>Karta raqami xato! Iltimos karta raqamini tog’ri yozing</value>
+  </data>
+  <data name="IPPhonePageSubTitle" xml:space="preserve">
+    <value>IP Telefoniya Bo`limi</value>
+  </data>
+  <data name="IPPhonePageTitle" xml:space="preserve">
+    <value>IP Telefoniya</value>
+  </data>
+  <data name="IPPhoneSelectProvider" xml:space="preserve">
+    <value>Provaderni tanglang:</value>
+  </data>
+  <data name="IPTVPageSubTitle" xml:space="preserve">
+    <value>Televedeniya (IP TV) Bo`limi</value>
+  </data>
+  <data name="IPTVPageTitle" xml:space="preserve">
+    <value>Televedeniya (IP TV)</value>
+  </data>
+  <data name="IPTVSelectProviderText" xml:space="preserve">
+    <value>Provayderni tanglang:</value>
+  </data>
+  <data name="ISSSelectProviderText" xml:space="preserve">
+    <value>Provayderni tanglang:</value>
+  </data>
+  <data name="ISSSubTitle" xml:space="preserve">
+    <value>Internet Provayderlar (Wi-Fi)</value>
+  </data>
+  <data name="ISSTitle" xml:space="preserve">
+    <value>Internet Provayderlar (Wi-Fi)</value>
+  </data>
+  <data name="LoginBtnText" xml:space="preserve">
+    <value>Kirish</value>
+  </data>
+  <data name="LoginBtnWithoutLogin" xml:space="preserve">
+    <value>Tizimga Kirmasdan Davom Etish</value>
+  </data>
+  <data name="LoginFailText" xml:space="preserve">
+    <value>Mail yoki parol xatoli!</value>
+  </data>
+  <data name="LoginNeededMessage" xml:space="preserve">
+    <value>Avval tizimga kirish zarur, tizimga kirishni istaysizmi?</value>
+  </data>
+  <data name="LoginPassText" xml:space="preserve">
+    <value>Parol:</value>
+  </data>
+  <data name="LoginRegisterText" xml:space="preserve">
+    <value>Xoziroq royxatdan o`tish!</value>
+  </data>
+  <data name="LoginSubTitle" xml:space="preserve">
+    <value>Kirish yoki davom etish</value>
+  </data>
+  <data name="LoginSuccessText" xml:space="preserve">
+    <value>Kirish muvofoqiyatli!</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginUsernameText" xml:space="preserve">
+    <value>Login yoki emailingiz:</value>
+  </data>
+  <data name="MainTitle" xml:space="preserve">
+    <value>PayProUz</value>
+  </data>
+  <data name="MobilePageInputPhone" xml:space="preserve">
+    <value>Telefon raqamini yozing:</value>
+  </data>
+  <data name="MobilePageSubTitle" xml:space="preserve">
+    <value>Mobil Aloqalar Bo`limi</value>
+  </data>
+  <data name="MobilePageTitle" xml:space="preserve">
+    <value>Mobil Aloqalar</value>
+  </data>
+  <data name="PaymentBtnCompleteText" xml:space="preserve">
+    <value>To`lash!</value>
+  </data>
+  <data name="PaymentPagePaid" xml:space="preserve">
+    <value>To`lanadigan pul</value>
+  </data>
+  <data name="PaymentPageSubTitle" xml:space="preserve">
+    <value>To`lov sahifasi</value>
+  </data>
+  <data name="PaymentPageTitle" xml:space="preserve">
+    <value>Complete Payment</value>
+  </data>
+  <data name="PaymentPageWarningText" xml:space="preserve">
+    <value>Kiritgan ma'lumotlaringizni tekshiring. Agar xatolik bo`lsa orqaga qaytib to`g`irlang!</value>
+  </data>
+  <data name="PickerPlaceHolderText" xml:space="preserve">
+    <value>Tanglang...</value>
+  </data>
+  <data name="PublicServicesPageSelectCity" xml:space="preserve">
+    <value>Viloyatni Tanlang:</value>
+  </data>
+  <data name="PublicServicesPageSelectCounty" xml:space="preserve">
+    <value>Xududni Tanlang:</value>
+  </data>
+  <data name="PublicServicesPageServiceTypeText" xml:space="preserve">
+    <value>Xizmat Turu:</value>
+  </data>
+  <data name="PublicServicesPageSubTitle" xml:space="preserve">
+    <value>Kommunal Xizmatlar Bo`limi</value>
+  </data>
+  <data name="PublicServicesPageTitle" xml:space="preserve">
+    <value>Kommunal Xizmatlar</value>
+  </data>
+  <data name="TabPageContactTitle" xml:space="preserve">
+    <value>Aloqa</value>
+  </data>
+  <data name="TabPagePastOrdersTitle" xml:space="preserve">
+    <value>To`lovlarim</value>
+  </data>
+  <data name="TabPageProfileTitle" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+</root>

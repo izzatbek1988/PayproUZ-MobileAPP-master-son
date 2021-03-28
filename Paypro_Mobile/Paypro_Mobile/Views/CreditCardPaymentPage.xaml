@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:behavior1="clr-namespace:Paypro_Mobile.Models"
+              xmlns:Resource="clr-namespace:Paypro_Mobile.Resources"
+             x:Class="Paypro_Mobile.Views.CreditCardPaymentPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame BorderColor="DodgerBlue" HasShadow="True" Margin="20,20,20,150" CornerRadius="10" Padding="10">
+                <StackLayout x:Name="MasterLayout">
+                    <StackLayout x:Name="LogoStack" Margin="0,0,0,10">
+                        <Image x:Name="payproLogo" Source="paypro2.png" ></Image>
+                        <BoxView x:Name="line" ></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="&#xf09d;" TextColor="Black" VerticalTextAlignment="Center" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label  HorizontalTextAlignment="Center" x:Name="lblHeading" Text="{x:Static Resource:LangRS.CardPageSubTitle}"></Label>
+                            <Label Text="&#xf063;" TextColor="Black" VerticalTextAlignment="Center" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                        </StackLayout>
+                        <BoxView x:Name="line2" ></BoxView>
+                    </StackLayout>
+                    <StackLayout x:Name="TextBoxStack" >
+                        <Label x:Name="lblCardNumber" Text="{x:Static Resource:LangRS.CardPageCardNumberInput}"></Label>
+                        <Entry TextChanged="tboxCardNumber_TextChanged"  ClearButtonVisibility="WhileEditing" x:Name="tboxCardNumber" Placeholder="{x:Static Resource:LangRS.CardPageCardNumberInput}" Keyboard="Numeric" >
+                            <Entry.Behaviors>
+                                <behavior1:MaskedBehavior Mask="XXXX-XXXX-XXXX-XXXX" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <StackLayout x:Name="layoutCard" Orientation="Horizontal" Padding="0,10,0,10">
+                            <Label Text="&#xf09d;"  TextColor="DarkGreen" VerticalOptions="CenterAndExpand" FontSize="14" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label x:Name="lblCardInfo" FontSize="14" VerticalOptions="CenterAndExpand" FontAttributes="Bold" TextColor="DarkGreen" Text="SERCAN BAYRAMBEY"></Label>
+                            <Label x:Name="lblSeperate" FontSize="14" VerticalOptions="CenterAndExpand" FontAttributes="Bold" TextColor="Black" Text=" - "></Label>
+                            <Label x:Name="lblBankInfo" FontSize="14" VerticalOptions="CenterAndExpand" FontAttributes="Bold"  Text="Ziraat Bank"></Label>
+                        </StackLayout>
+
+                        <StackLayout x:Name="layoutError" IsVisible="false" Orientation="Horizontal" Padding="0,10,0,10">
+                            <Label Text="&#xf06a;"  TextColor="Red" VerticalOptions="CenterAndExpand" FontSize="14" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label x:Name="lblError" FontSize="14" VerticalOptions="CenterAndExpand" FontAttributes="Bold" TextColor="Red" Text="{x:Static Resource:LangRS.InvalidCardErrorText}"></Label>
+                        </StackLayout>
+
+                        <Label x:Name="lblMoney" Text="{x:Static Resource:LangRS.GlobalInputMoneyText}"></Label>
+                        <Entry x:Name="tboxMoney" MaxLength="7" Placeholder="{x:Static Resource:LangRS.GlobalInputMoneyText}" Keyboard="Numeric" />
+                        <Button CornerRadius="10" x:Name="btnContinue" Clicked="btnContinue_Clicked" Text="{x:Static Resource:LangRS.GlobalBtnContinueText}"></Button>
+                        <Button CornerRadius="10" x:Name="btnBack" Text="{x:Static Resource:LangRS.GlobalBtnBackText}" Clicked="btnBack_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>  
+</ContentPage>

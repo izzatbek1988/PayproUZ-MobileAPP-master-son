@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:Resource="clr-namespace:Paypro_Mobile.Resources"
+             mc:Ignorable="d"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             x:Class="Paypro_Mobile.Views.HomePage"
+            BackgroundColor="DodgerBlue"
+            x:Name="tabbedPage"
+            CurrentPageChanged="TabbedPage_CurrentPageChanged">
+
+    <NavigationPage.TitleView >
+        <Label x:Name="lblTitle"/>
+    </NavigationPage.TitleView>
+
+
+
+    <ContentPage Title="{StaticResource titleHome}" IconImageSource="iconhome.png">
+        
+        
+        
+        <ContentPage.ToolbarItems>
+            <ToolbarItem
+                 Text="{x:Static Resource:LangRS.ChangeLanguageText}"
+                 Order="Secondary"
+                Clicked="ToolbarItemChangeLanguage_Clicked"
+                 Priority="0" />
+        </ContentPage.ToolbarItems>
+        
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout BackgroundColor="#d3f0e9">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+
+                        <StackLayout   BackgroundColor="DodgerBlue" Grid.Row="0" Grid.Column="0" >
+                            <StackLayout Orientation="Horizontal" Padding="0" Spacing="5" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="lblWelcomeMsg" TextColor="White" FontSize="20"  HorizontalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout   BackgroundColor="DodgerBlue" Grid.Row="1" Grid.Column="0" >
+                                <StackLayout Orientation="Horizontal" Padding="0" Spacing="5" HorizontalOptions="CenterAndExpand">
+                                    <Label TextColor="White" FontSize="20" Text="1 Rubl" HorizontalOptions="CenterAndExpand"></Label>
+                                    <Image Source="ru.png"  HeightRequest="24" WidthRequest="24" HorizontalOptions="CenterAndExpand"></Image>
+                                    <Label Text="= " TextColor="White" FontSize="20"  BackgroundColor="DodgerBlue"  HorizontalOptions="CenterAndExpand"/>
+                                    <Label x:Name="lblCurrencyRate" TextColor="White" FontSize="20"  BackgroundColor="DodgerBlue"  HorizontalOptions="CenterAndExpand"  />
+                                    <Label Text=" UZS" TextColor="White" FontSize="20"  BackgroundColor="DodgerBlue"  HorizontalOptions="CenterAndExpand"/>
+                                    <Image Source="uz2.png"  HeightRequest="24" WidthRequest="24" HorizontalOptions="CenterAndExpand"></Image>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout   BackgroundColor="DodgerBlue" Grid.Row="2" Grid.Column="0" >
+                            <StackLayout Orientation="Horizontal" Padding="0" Spacing="5" HorizontalOptions="CenterAndExpand">
+                                <Label TextColor="White" FontSize="20" Text="100 Rubl" HorizontalOptions="CenterAndExpand"></Label>
+                                <Image Source="ru.png"  HeightRequest="24" WidthRequest="24" HorizontalOptions="CenterAndExpand"></Image>
+                                <Label Text="= " TextColor="White" FontSize="20"  BackgroundColor="DodgerBlue"  HorizontalOptions="CenterAndExpand"/>
+                                <Label x:Name="lblCurrencyRate100" TextColor="White" FontSize="20"  BackgroundColor="DodgerBlue"  HorizontalOptions="CenterAndExpand"  />
+                                <Label Text=" UZS" TextColor="White" FontSize="20"  BackgroundColor="DodgerBlue"  HorizontalOptions="CenterAndExpand"/>
+                                <Image Source="uz2.png"  HeightRequest="24" WidthRequest="24" HorizontalOptions="CenterAndExpand"></Image>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+
+                    <!-- Bu ortadeki ogelerin oldugu frame (Mobil aloqa, wi-fi ...)-->
+                    <StackLayout Padding="15,0,15,0">
+
+                        <StackLayout BackgroundColor="#d3f0e9">
+                            <Grid RowSpacing="10" ColumnSpacing="10" >
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Burasi ogelerin baslaadigi yer.-->
+
+                                <!--Bu Mobil aloqa kismi-->
+
+
+                                <Frame BorderColor="Gray" HasShadow="True" BackgroundColor="#f4faf2" CornerRadius="15" Grid.Row="0" Grid.Column="0" Margin="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="MobileButton_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout>
+                                        <!--<StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="MobileButton_Clicked"/>
+                                        </StackLayout.GestureRecognizers>-->
+
+                                        <Label Text="&#xf3cd;" HorizontalOptions="Center" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                        <Label Text="{x:Static Resource:LangRS.HomePageMobile}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+
+                                <!--Bu Mobil aloqa kismi bitisi-->
+
+                                <!-- Bu Wi-Fi alani baslanisi-->
+                                <Frame BorderColor="Gray" HasShadow="True" BackgroundColor="#f4faf2" CornerRadius="15" Grid.Row="0" Grid.Column="1" Margin="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ISSButton_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout>
+                                        <!--<StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ISSButton_Clicked"/>
+                                        </StackLayout.GestureRecognizers>-->
+                                        <Label Text="&#xf1eb;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                        <Label Text="{x:Static Resource:LangRS.HomePageISS}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+
+                                </Frame>
+                                <!-- Bu Wi-Fi alani bitisi-->
+
+                                <!-- Bu CrediCard alani baslanisi-->
+                                <Frame BorderColor="Gray" HasShadow="True" BackgroundColor="#f4faf2" CornerRadius="15" Grid.Row="1" Grid.Column="0" Margin="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="CreditCardButton_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout  >
+                                        <!-- <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="CreditCardButton_Clicked"/>
+                                </StackLayout.GestureRecognizers>-->
+                                        <Label Text="&#xf09d;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                        <Label Text="{x:Static Resource:LangRS.HomePageCard}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+                                <!-- Bu CrediCard alani bitisi-->
+
+                                <!-- Bu Kommunal alani baslanisi-->
+                                <Frame BorderColor="Gray" HasShadow="True" BackgroundColor="#f4faf2" CornerRadius="15" Grid.Row="1" Grid.Column="1" Margin="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="PublicServicesButton_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout >
+                                        <!--<StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="PublicServicesButton_Clicked"/>
+                                        </StackLayout.GestureRecognizers>-->
+                                        <Label Text="&#xf570;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                        <Label Text="{x:Static Resource:LangRS.HomePagePublicServices}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+                                <!-- Bu Kommunal alani bitisi-->
+
+                                <!-- Bu IP TV alani baslanisi-->
+                                <Frame BorderColor="Gray" HasShadow="True" BackgroundColor="#f4faf2" CornerRadius="15" Grid.Row="2" Grid.Column="0" Margin="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="IPTV_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout>
+                                        <!--<StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="IPTV_Clicked"/>
+                                        </StackLayout.GestureRecognizers>-->
+                                        <Label Text="&#xf26c;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                        <Label Text="{x:Static Resource:LangRS.HomePageIPTV}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+                                <!-- Bu IP TV alani bitisi-->
+
+                                <!-- Bu Telefoniya TV alani baslanisi-->
+                                <Frame BorderColor="Gray" HasShadow="True" BackgroundColor="#f4faf2" CornerRadius="15" Grid.Row="2" Grid.Column="1" Margin="10">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="PhoneIP_Clicked"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout >
+                                        <!--    <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="PhoneIP_Clicked"/>
+                                        </StackLayout.GestureRecognizers>-->
+                                        <Label Text="&#xf87b;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                        <Label Text="{x:Static Resource:LangRS.HomePageIPTelefoniya}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+                                <!-- Bu Telefoniya TV alani baslanisi-->
+
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                    
+                   <!---<Frame BorderColor="LightGray">
+                        <StackLayout Orientation="Horizontal" Padding="0" Spacing="5" HorizontalOptions="CenterAndExpand">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="lblLanguage_Clicked"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="&#xf0ac;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="21" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label x:Name="lblLanguage" FontSize="21"  TextColor="DodgerBlue"   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>-->
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+
+
+
+
+
+    <ContentPage Title="{StaticResource titleProfile}"  IconImageSource="iconprofile.png">
+        <ScrollView>
+            <StackLayout x:Name="MasterLayout">
+                <StackLayout x:Name="LogoStack">
+                    <Image x:Name="payproLogo" Source="paypro2.png" Margin="0,30,0,0" ></Image>
+                    <BoxView x:Name="line" ></BoxView>
+                    <Label HorizontalOptions="Center" x:Name="lblHeading" Text="Profilim"></Label>
+                    <BoxView x:Name="line2" ></BoxView>
+                </StackLayout>
+                <StackLayout>
+
+                    <StackLayout.Padding>
+                        <OnIdiom x:TypeArguments="Thickness"
+                        Phone ="0,0,0,0"
+                        Tablet = "140,150,140,0"/>
+                    </StackLayout.Padding>
+
+                    <StackLayout x:Name="TextBoxStack" Margin="20,20,20,0">
+                        <Label x:Name="lblProfileUsername" Text="Login (You cant change your username):"/>
+                        <Entry x:Name="tboxProfileUsername" IsReadOnly="True"/>
+
+                        <Label x:Name="lblProfilePhoneNumber" Text="Telefon Raqami:"/>
+                        <Entry x:Name="tboxProfilePhoneNumber" Placeholder="Telefon raqami..."/>
+
+                        <Label x:Name="lblProfileEMail" Text="E Mail:"/>
+                        <Entry x:Name="tboxProfileEMail" Placeholder="E-Mail..."/>
+                            <Button x:Name="btnProfileSave"  Clicked="btnProfileSave_Clicked" Text="Save!"/>
+                        <Grid>
+                            <Button x:Name="btnLogout"  Grid.Row="0" Grid.Column="0" Clicked="btnLogout_Clicked" Text="Logout"/>
+                            <Button x:Name="btnProfileReset" BackgroundColor="DarkGray" Grid.Row="0" Grid.Column="1" Clicked="btnProfileReset_Clicked" Text="Yangilash"/>
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+
+    <ContentPage Title="{StaticResource titlePastOrders}"  BackgroundColor="WhiteSmoke" IconImageSource="iconhistory.png">
+        <ScrollView>
+            <StackLayout  Spacing="0" Padding="0,10,0,10">
+                <Grid>
+                    <Label  Text="To`langan" BackgroundColor= "LightGreen"  FontAttributes="Bold" Grid.Column="0"/>
+                    <Label  Text="To`lanmagan" BackgroundColor="LightYellow" FontAttributes="Bold"  Grid.Column="1"/>
+                </Grid>
+
+                <Grid  ColumnSpacing="3" Padding="0,10,0,3" >
+                    <Label  BackgroundColor="White" Text="Sana"          HorizontalTextAlignment="Center" FontAttributes="Bold"  Grid.Column="0"/>
+                    <Label  BackgroundColor="White" Text="Ishlam Turu"   HorizontalTextAlignment="Center" FontAttributes="Bold"  Grid.Column="1"></Label>
+                    <Label  BackgroundColor="White" Text="Xisob Raqami"  HorizontalTextAlignment="Center" FontAttributes="Bold"   Grid.Column="2"></Label>
+                    <Label  BackgroundColor="White" Text="To`plam (UZS)" HorizontalTextAlignment="Center" FontAttributes="Bold"  Grid.Column="3"></Label>
+                </Grid>
+
+                <ListView x:Name="listViewPastOrders" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid  ColumnSpacing="3" Padding="0,0,0,3">
+                                        <Label  Padding="0,2,0,2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BGColor}" Text="{Binding datetime,StringFormat='{0:dd/MM/yyyy HH:mm}'}"  Grid.Column="0"/>
+                                        <Label  Padding="0,2,0,2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BGColor}" Text="{Binding paymentType}"  Grid.Column="1"></Label>
+                                        <Label  Padding="0,2,0,2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BGColor}" Text="{Binding accountNumber}"  Grid.Column="2"></Label>
+                                        <Label  Padding="0,2,0,2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding BGColor}" Text="{Binding customerAmountUZS}"  Grid.Column="3"></Label>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+            </StackLayout>
+        
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="{StaticResource titleContact}"  IconImageSource="iconcontact.png">
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout>
+
+                    <Grid>
+                        <Label  FontSize="Large" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Biz Bilan Bog`lanish"></Label>
+                    </Grid>
+
+                    <Frame BorderColor="LightGray">
+                        <Grid RowSpacing="1" ColumnSpacing="1" BackgroundColor="LightGray">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="120"/>
+                            </Grid.RowDefinitions>
+
+
+                            <StackLayout   BackgroundColor="White" Grid.Row="0" Grid.Column="0" >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnTelegram_Clicked"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="&#xf2c6;" HorizontalOptions="CenterAndExpand" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeBrands}" />
+                                <Label Text="Telegramdan bog`lanish" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+
+                            <StackLayout  BackgroundColor="White" Grid.Row="0" Grid.Column="1" >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnWhatsApp_Clicked"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="&#xf232;" HorizontalOptions="CenterAndExpand" TextColor="Green" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeBrands}" />
+                                <Label Text="WhatsAppdan bog`lanish" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+
+
+                            <StackLayout   BackgroundColor="White" Grid.Row="1" Grid.Column="0" >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnTelegram2_Clicked"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="&#xf2c6;" HorizontalOptions="Center" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeBrands}" />
+                                <Label Text="Telegramdagi rasmiy kanalimiz" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand" ></Label>
+                            </StackLayout>
+                            
+                            <StackLayout   BackgroundColor="White" Grid.Row="1" Grid.Column="1" >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnWebsite_Clicked"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="&#xf0ac;" HorizontalOptions="Center" TextColor="DodgerBlue" VerticalOptions="CenterAndExpand" FontSize="50" FontFamily="{StaticResource FontAwesomeSolid}" />
+                                <Label Text="Web sahifamiz" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  FontSize="16" VerticalOptions="CenterAndExpand" ></Label>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+
+</TabbedPage>
+
+
+
+
+
+    
+
+
+

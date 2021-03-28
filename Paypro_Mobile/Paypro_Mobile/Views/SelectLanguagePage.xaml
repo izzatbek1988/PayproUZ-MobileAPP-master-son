@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paypro_Mobile.Views.SelectLanguagePage"
+             xmlns:Resource="clr-namespace:Paypro_Mobile.Resources">
+
+    <NavigationPage.TitleView>
+        <Label x:Name="lblTitle" Text="Select Language"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout>
+                <Frame BorderColor="LightGray" CornerRadius="10" BackgroundColor="Transparent" Margin="20,100,20,20">
+                    <StackLayout Padding="50,0" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal" >
+                            <Label Text="&#xf0ac;" VerticalTextAlignment="Center"  TextColor="Black" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                            <Label  HorizontalTextAlignment="Center" Text="Select Language"  VerticalTextAlignment="Center"   TextColor="Black" FontSize="24"/>
+                            <Label Text="&#xf063;" VerticalTextAlignment="Center"   TextColor="Black" FontSize="20" FontFamily="{StaticResource FontAwesomeSolid}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <RadioButton x:Name="rbtnKiril" IsChecked="True" GroupName="langSelect" Text="Кирилча"/>
+                            <RadioButton x:Name="rbtnLatin" GroupName="langSelect" Text="Lotincha"/>
+                        </StackLayout>
+                        <Button CornerRadius="10" x:Name="btnContinue"  Clicked="btnContinue_Clicked_1" Text="{x:Static Resource:LangRS.GlobalBtnContinueText}"></Button>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>
